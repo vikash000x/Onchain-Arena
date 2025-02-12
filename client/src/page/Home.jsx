@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Tilt from 'react-parallax-tilt';
+
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 import { ethers } from "ethers";
 
@@ -117,9 +120,45 @@ export default PageHOC(
   Home,
   <>
     Welcome to Avax Gods <br /> a Web3 NFT Card Game
+    <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02}>
+    <footer className="bg-muted/50 py-5  ">
+      <div className="container mx-auto px-4 text-center text-gray-200">
+      <p className="text-white text-sm text-center">Come join us and hear for the unexpected miracle</p>
+        <p className="text-lg font-semibold">Welcome to Vikash Codex Clan 💗</p>
+        <div className="flex justify-center gap-6 mt-4">
+          <a
+            href="https://github.com/vikash000x"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-200 hover:text-gray-400 transition duration-300"
+          >
+            <FaGithub size={24} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/vikash-sinha-215000259/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-200 hover:text-gray-400 transition duration-300"
+          >
+            <FaLinkedin size={24} />
+          </a>
+          <a
+            href="https://x.com/vikash_sinha_"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-200 hover:text-gray-400 transition duration-300"
+          >
+            <FaTwitter size={24} />
+          </a>
+        </div>
+      </div>
+    </footer>
+    </Tilt>
   </>,
   <>
     Connect your wallet to start playing <br /> the ultimate Web3 Battle Card
     Game
+
+    
   </>,
 );
